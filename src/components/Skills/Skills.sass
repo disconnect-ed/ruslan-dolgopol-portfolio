@@ -1,0 +1,75 @@
+$shadow-medium: 0 0 10px #9CBC68, 0 0 40px #9CBC68
+
+.skills
+  &-wrap
+    grid-template-columns: repeat(4, 1fr)
+    padding: 20px
+    grid-gap: 20px
+  &-header
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__title
+    font-family: 'mont-bold', sans-serif
+    font-size: 2.5rem
+    display: block
+  &-card
+    display: flex
+    height: 290px
+    color: white
+    cursor: pointer
+    justify-content: center
+    align-items: center
+    position: relative
+    transition: all 0.3s ease
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+    &:hover .skills-card__mask
+      opacity: 1
+      box-shadow: $shadow-medium
+    &__mask
+      opacity: 0
+      position: absolute
+      transition: all 0.2s ease
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-color: rgba(156, 188, 104, 1)
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      font-size: 35px
+      h5
+        margin-top: 10px
+      &__title
+        font-family: 'mont-med', sans-serif
+        font-size: 30px
+        margin-bottom: 30px
+    &__img
+      display: block
+      width: 100%
+      height: auto
+
+@media only screen and (max-width: 960px)
+  .skills
+    &-wrap
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: auto
+
+@media only screen and (max-width: 720px)
+  .skills
+    &-wrap
+      grid-template-columns: 1fr 1fr
+
+@media only screen and (max-width: 540px)
+  .skills
+    &-wrap
+      grid-template-columns: 1fr
+
+
+
+

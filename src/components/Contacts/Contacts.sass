@@ -1,0 +1,101 @@
+$shadow: 0 0 10px #9CBC68
+$shadow-big: 0 0 10px #9CBC68, 0 0 40px #9CBC68, 0 0 80px #9CBC68
+$shadow-medium: 0 0 10px #9CBC68, 0 0 20px #9CBC68
+
+.contacts
+  &-header
+    height: 80px
+    display: flex
+    justify-content: center
+    align-items: center
+    line-height: 80px
+  &-wrap
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr
+    padding: 50px
+    grid-gap: 50px
+  &__title
+    font-family: 'mont-bold', sans-serif
+    font-size: 40px
+    display: block
+  &-card
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    transition: all 0.3s ease
+    height: 300px
+    box-shadow: $shadow-medium
+    &:hover
+      box-shadow: $shadow-big
+    &__icon
+      font-size: 50px
+      margin-bottom: 25px
+    &__title
+      font-family: 'mont-med', sans-serif
+      font-size: 25px
+      margin-bottom: 15px
+    &__text
+      font-family: 'mont-reg', sans-serif
+      font-size: 20px
+    &__links
+      display: flex
+    &__link
+      display: block
+      color: white
+      font-size: 20px
+      text-decoration: none
+      margin-left: 15px
+      margin-right: 15px
+      transition: all 0.2s ease
+      &:hover
+        color: #9CBC68
+
+@media only screen and (max-width: 1200px)
+
+  .contacts
+    &-wrap
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr 1fr
+    &-card
+      &:last-child
+        grid-column: 1 / 3
+
+@media only screen and (max-width: 720px)
+
+  .contacts
+    &-wrap
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr 1fr
+    &-card
+      &:last-child
+        grid-column: auto
+
+@media only screen and (max-width: 480px)
+
+  .contacts
+    &-header
+      height: 60px
+      line-height: 60px
+    &__title
+      font-size: 30px
+    &-wrap
+      padding: 30px
+      grid-gap: 30px
+    &-card
+      &__links
+        flex-direction: column
+        justify-content: center
+        align-items: center
+      &__link
+        &:first-child
+          margin-bottom: 15px
+      &__icon
+        font-size: 40px
+        margin-bottom: 20px
+      &__title
+        font-size: 20px
+        margin-bottom: 10px
+      &__text
+        font-size: 15px

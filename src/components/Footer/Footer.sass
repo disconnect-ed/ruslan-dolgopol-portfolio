@@ -1,0 +1,35 @@
+
+
+.footer
+  height: 100px
+  width: 100%
+  margin: 50px 0
+  background-color: rgba(0,0,0, 0.5)
+  color: white
+  padding: 0 30px
+  line-height: 100px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-copyright
+    font-family: 'mont-med', sans-serif
+  &-social
+    &-links
+    &__link
+      color: white
+      text-decoration: none
+      font-size: 30px
+      margin-left: 30px
+      transition: all 0.2s ease
+      &:hover
+        color: #9CBC68
+
+@media only screen and (max-width: 480px)
+  .footer
+    flex-direction: column
+    line-height: 50px
+    &-social
+      &-links
+      &__link
+        &:first-child
+          margin-left: 0

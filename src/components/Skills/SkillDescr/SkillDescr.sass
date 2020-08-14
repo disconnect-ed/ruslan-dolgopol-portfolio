@@ -1,0 +1,68 @@
+$shadow: 0 0 10px #9CBC68, 0 0 40px #9CBC68
+
+.skills-descr
+  &-wrap
+    grid-template-columns: 1fr 2fr
+    grid-template-rows: auto auto
+    padding: 20px
+    grid-gap: 20px
+    font-size: 20px
+    font-family: 'mont-reg', sans-serif
+  &-img
+    background-position: center
+    background-repeat: no-repeat
+    background-size: contain
+  &-text
+    min-height: 250px
+  &-progress-wrap
+    grid-column: 1 / 4
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+  &-progress
+    max-width: 250px
+    &__title
+      font-size: 30px
+
+@media only screen and (max-width: 720px)
+
+  .skills-descr
+    &-wrap
+      grid-template-columns: 1fr
+      grid-template-rows: 200px auto auto
+    &-progress-wrap
+      grid-row: 3 / 4
+      grid-column: 1 / 2
+    &-text
+      grid-row: 2 / 3
+      grid-column: 1 / 2
+      text-align: center
+      min-height: 120px
+
+@media only screen and (max-width: 540px)
+
+  .skills-descr
+    &-text
+      font-size: 15px
+    &-progress
+      &__title
+        text-align: center
+        font-size: 25px
+        margin-bottom: 0
+
+
+
+@media only screen and (max-width: 374px)
+
+  .skills-descr
+
+    &-progress
+      margin-top: 15px
+      &__title
+        text-align: center
+
+
+
+

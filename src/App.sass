@@ -1,0 +1,101 @@
+@font-face
+  font-family: 'mont-bold'
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype')
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: 'mont-med'
+  src: url('./assets/fonts/Montserrat-Medium.ttf')  format('truetype')
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: 'mont-reg'
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype')
+  font-style: normal
+  font-weight: normal
+
+::-webkit-scrollbar-button
+  background-image: url('')
+  background-repeat:  no-repeat
+  width:  6px
+  height: 0px
+
+
+::-webkit-scrollbar-track
+  background-color: #202121
+  box-shadow: 0px 0px 3px #000 inset
+
+::-webkit-scrollbar-thumb
+  -webkit-border-radius: 5px
+  border-radius: 5px
+  background-color: #9CBC68
+  box-shadow: 0px 1px 1px #9CBC68 inset
+  background-image: url('https://yraaa.ru/_pu/24/59610063.png')
+  background-position:  center
+  background-repeat:  no-repeat
+
+
+::-webkit-resizer
+  background-image: url('')
+  background-repeat:  no-repeat
+  width:  7px
+  height: 0px
+
+
+::-webkit-scrollbar
+  width: 11px
+
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: 'mont-reg', sans-serif
+
+body
+  overflow-x: hidden
+  background-color: black
+
+.lock
+  overflow: hidden
+
+.particles
+  position: fixed
+  z-index: -10
+
+.App
+  overflow-x: hidden
+  &:before
+    content: ''
+    background-image: url("assets/img/bg.jpg")
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    z-index: -30
+
+
+.grid
+  display: grid
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 15px
+
+.section__title
+  font-family: 'mont-bold', sans-serif
+  font-size: 40px
+  display: block
+
+@media only screen and (max-width: 480px)
+
+  .section__title
+    font-size: 30px
+

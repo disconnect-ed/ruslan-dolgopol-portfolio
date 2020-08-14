@@ -1,0 +1,70 @@
+
+
+.header
+  color: white
+  display: flex
+  justify-content: center
+  align-items: center
+  text-align: center
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  &-content
+
+  &__title
+    //font-size: 5rem
+    font-size: 80px
+  &__subtitle
+    font-size: 25px
+    margin-bottom: 50px
+  &-social
+    &-links
+    &__link
+      color: white
+      margin-right: 20px
+      margin-left: 20px
+      font-size: 50px
+      transition: all 0.3s ease
+      &:hover
+        color: #9CBC68 !important
+
+@media only screen and (max-width: 720px)
+
+  .header
+    &__title
+      font-size: 50px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 25px
+    &-social
+      &-links
+      &__link
+        font-size: 40px
+
+@media only screen and (max-width: 460px)
+
+  .header
+    &__title
+      font-size: 35px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 20px
+    &-social
+      &-links
+      &__link
+        font-size: 30px
+
+@media only screen and (max-height: 460px)
+
+  .header
+    &__title
+      font-size: 50px
+    &__subtitle
+      font-size: 15px
+      margin-bottom: 25px
+    &-social
+      &-links
+      &__link
+        font-size: 40px
