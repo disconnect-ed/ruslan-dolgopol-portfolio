@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ruslan-dolgopol-portfolio/precache-manifest.5587eaeef3c14f394e15f78db10fe8e2.js"
+  "/ruslan-dolgopol-portfolio/precache-manifest.7f50baf59cff69375df746a67af18f48.js"
 );
 
 self.addEventListener('message', (event) => {

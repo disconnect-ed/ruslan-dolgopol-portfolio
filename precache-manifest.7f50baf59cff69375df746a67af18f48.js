@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "142c2bbd08b19d3eba0655d00c2b570b",
+    "revision": "ea0e6ef11883daaa0eaf0595d576ef40",
     "url": "/ruslan-dolgopol-portfolio/index.html"
   },
   {
-    "revision": "ba13f72d0ab23ec6ec4f",
+    "revision": "1a2054b335c4d418266e",
     "url": "/ruslan-dolgopol-portfolio/static/css/2.f524894f.chunk.css"
   },
   {
-    "revision": "2db8c567d5af28c43356",
-    "url": "/ruslan-dolgopol-portfolio/static/css/main.73ff5a82.chunk.css"
+    "revision": "38747b11a4c042b1ec8f",
+    "url": "/ruslan-dolgopol-portfolio/static/css/main.2ba5510e.chunk.css"
   },
   {
-    "revision": "ba13f72d0ab23ec6ec4f",
-    "url": "/ruslan-dolgopol-portfolio/static/js/2.239dda0b.chunk.js"
+    "revision": "1a2054b335c4d418266e",
+    "url": "/ruslan-dolgopol-portfolio/static/js/2.9da435dc.chunk.js"
   },
   {
-    "revision": "2069192f75c6f3fb6247231eea52f248",
-    "url": "/ruslan-dolgopol-portfolio/static/js/2.239dda0b.chunk.js.LICENSE.txt"
+    "revision": "3453b8997016469371284a28c0e873e2",
+    "url": "/ruslan-dolgopol-portfolio/static/js/2.9da435dc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2db8c567d5af28c43356",
-    "url": "/ruslan-dolgopol-portfolio/static/js/main.da15e62f.chunk.js"
+    "revision": "38747b11a4c042b1ec8f",
+    "url": "/ruslan-dolgopol-portfolio/static/js/main.8ebe0f93.chunk.js"
   },
   {
-    "revision": "abb2b144c06b9b40cc27",
-    "url": "/ruslan-dolgopol-portfolio/static/js/runtime-main.3aeee637.js"
+    "revision": "ef7b490dc2ee50a6fc0b",
+    "url": "/ruslan-dolgopol-portfolio/static/js/runtime-main.dd9d71d4.js"
   },
   {
     "revision": "ade91f473255991f410f61857696434b",
