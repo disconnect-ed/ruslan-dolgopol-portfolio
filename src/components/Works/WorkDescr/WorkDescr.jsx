@@ -7,7 +7,7 @@ import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Paginator from "../../common/Paginator/Paginator";
 
-const WorkDescr = (props) => {
+const WorkDescr = ({langIsEng, ...props}) => {
 
     const work = Number(props.match.params.work)
     const data = props.worksData.filter(result => {
@@ -31,7 +31,7 @@ const WorkDescr = (props) => {
                                     </div>
                                     <div className="works-descr-technologies">
                                         <h3 className="works__title works-descr__title">
-                                            Что использовалось
+                                            {langIsEng ? 'What was used' : 'Что использовалось'}
                                         </h3>
                                         <ul className='works-descr-list'>
                                             {result.stack.map(item => {
@@ -44,17 +44,17 @@ const WorkDescr = (props) => {
                                     </div>
                                     <div className="works-descr-info">
                                         <h3 className="works__title works-descr__title">
-                                            Описание
+                                            {langIsEng ? 'Description' : 'Описание'}
                                         </h3>
                                         <p className="works-descr__text">
-                                            {result.descr}
+                                            {langIsEng ? result.descrEn : result.descrRu}
                                         </p>
                                     </div>
                                 </div>
                                 {result.link &&
                                 <div className="works-footer ">
                                     <a target='_blank' href={result.link} className='works-descr__link'>
-                                        <FontAwesomeIcon icon={faEye}/> Смотреть
+                                        <FontAwesomeIcon icon={faEye}/> {langIsEng ? 'Watch' : 'Смотреть'}
                                     </a>
                                 </div>
                                 }

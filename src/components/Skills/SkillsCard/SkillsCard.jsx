@@ -3,7 +3,7 @@ import {faHandPointer} from "@fortawesome/free-regular-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {NavLink} from "react-router-dom";
 
-const SkillsCard = (props) => {
+const SkillsCard = ({langIsEng, ...props}) => {
     return (
         <NavLink to={'/skills/' + props.path} className='skills-card'
                  style={{backgroundImage: `url(https://disconnect-ed.github.io/ruslan-dolgopol-portfolio/skills/${props.img})`}}>
@@ -11,7 +11,7 @@ const SkillsCard = (props) => {
                 <div>
                     <h4 className="skills-card__mask__title">{props.title}</h4>
                     <FontAwesomeIcon icon={faHandPointer} />
-                    <h5>Нажми!</h5>
+                    <h5>{langIsEng ? 'Click!' : 'Нажми!'}</h5>
                 </div>
             </div>
         </NavLink>

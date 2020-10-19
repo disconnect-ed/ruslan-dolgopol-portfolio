@@ -4,16 +4,16 @@ import {Animated} from "react-animated-css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin, faVk} from "@fortawesome/free-brands-svg-icons";
 
-const Header = () => {
+const Header = ({langIsEng}) => {
     return (
         <Animated animationIn="fadeIn" isVisible={true}>
             <header className='header'>
                 <div className="header-content">
                     <h1 className="header__title">
-                        Ruslan Dolgopol
+                        {langIsEng ? 'Ruslan Dolgopol' : 'Руслан Долгопол'}
                     </h1>
                     <h2 className="header__subtitle">
-                       Junior Front - End developer | Junior React developer
+                       Front - End developer | React and React Native developer
                     </h2>
                     <div className="header-social-links">
                         <a target='_blank' href="https://vk.com/r.dolgopol" className="header-social__link">

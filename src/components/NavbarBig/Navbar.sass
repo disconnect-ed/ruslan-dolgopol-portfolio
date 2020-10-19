@@ -35,21 +35,28 @@
     position: relative
     width: 100%
     height: 80px
-    &:hover a
+    &:last-child
+      position: absolute
+      bottom: 0
+    &:hover a,
+    &:hover button
       opacity: 1
       color: #9CBC68 !important
     &:hover .navbar-link__title
       opacity: 1
       display: inline-block
-    a
+    a, button
       display: block
       color: white
       opacity: 0.5
       font-size: 30px
       text-align: center
+      background-color: transparent
+      border: none
       width: 100%
       line-height: 80px
       transition: all 0.3s ease
+      cursor: pointer
     &__title
       color: white
       position: absolute

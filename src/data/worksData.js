@@ -1,11 +1,12 @@
 const worksData = [
     {
-        name: "Верстка интернет - магазина Portpro",
+        name: "Верстка макета Portpro",
         title: 'Верстка',
         img: "portpro.jpg",
         path: 1,
         stack: ['gulp', 'sass'],
-        descr: 'Адаптивная верстка интернет - магазина Portpro по PSD макету.',
+        descrRu: 'Адаптивная верстка интернет - магазина Portpro по PSD макету.',
+        descrEn: 'Adaptive layout of the Portpro online store using a PSD layout.',
         link: 'https://github.com/disconnect-ed/HTML-PORTPRO'
     },
     {
@@ -14,7 +15,8 @@ const worksData = [
         img: "music-fm.jpg",
         path: 2,
         stack: ['axios', 'bootstrap', 'md5 (хеширование)', 'react', 'react-redux', 'react-router-dom', 'redux', 'redux-thunk'],
-        descr: 'Приложение на React.js, предназначено для поиска треков, альбомов и исполнителей. В приложении реализованы возможности авторизации, добавление треков/альбомов/исполнителей в избранное. Также есть возможность просмотра своего профиля, друзей и других зарегестрированных пользователей. Приложение использует API сервиса last.fm.',
+        descrRu: 'Приложение на React.js, предназначено для поиска треков, альбомов и исполнителей. В приложении реализованы возможности авторизации, добавление треков/альбомов/исполнителей в избранное. Также есть возможность просмотра своего профиля, друзей и других зарегестрированных пользователей. Приложение использует API сервиса last.fm.',
+        descrEn: 'A React.js application designed to find tracks, albums and artists. The application implements authorization capabilities, adding tracks / albums / artists to favorites. It is also possible to view your profile, friends and other registered users. The application uses the last.fm service API.',
         link: 'https://github.com/disconnect-ed/music-fm'
     },
     {
@@ -23,7 +25,8 @@ const worksData = [
         img: "movie-searcher.jpg",
         path: 3,
         stack: ['axios', 'bootstrap', 'react', 'react-redux', 'react-router-dom', 'react-tabs', 'redux', 'redux-thunk', 'redux-form', 'reselect'],
-        descr: 'Приложение на React.js, предназначено для поиска фильмов и сериалов. Есть возможность авторизации и добавления контента в избранное. Данное приложение использует API киносервиса themoviedb.org.',
+        descrRu: 'Приложение на React.js, предназначено для поиска фильмов и сериалов. Есть возможность авторизации и добавления контента в избранное. Данное приложение использует API киносервиса themoviedb.org.',
+        descrEn: 'React.js application for searching movies and TV shows. It is possible to authorize and add content to favorites. This application uses the themoviedb.org movie service API.',
         link: 'https://github.com/disconnect-ed/Movie-Tv-searcher'
     },
     {
@@ -32,7 +35,8 @@ const worksData = [
         img: "social-network.jpg",
         path: 4,
         stack: ['axios', 'bootstrap', 'react', 'react-redux', 'react-router-dom', 'redux', 'redux-thunk', 'redux-form', 'reselect'],
-        descr: 'Приложение разрабатывалось по известному (в узких кругах) курсу "React JS - путь самурая".',
+        descrRu: 'Приложение разрабатывалось по известному (в узких кругах) курсу "React JS - путь самурая".',
+        descrEn: 'The application was developed according to the well-known (in narrow circles) course "React JS - the way of the samurai".',
         link: 'https://github.com/disconnect-ed/social-network-samurai-js'
     },
     {
@@ -41,7 +45,8 @@ const worksData = [
         img: "weather-app.jpg",
         path: 5,
         stack: ['axios', 'bootstrap', 'react', 'react-redux', 'react-router-dom', 'redux', 'redux-thunk'],
-        descr: 'Мое первое самостоятельное приложение на React.js. Данное приложение использует API сервиса погоды openweathermap.org.',
+        descrRu: 'Мое первое самостоятельное приложение на React.js. Данное приложение использует API сервиса погоды openweathermap.org.',
+        descrEn: 'My first standalone React.js application. This application uses the openweathermap.org weather service API.',
         link: 'https://github.com/disconnect-ed/Weather-App'
     },
     {
@@ -50,7 +55,8 @@ const worksData = [
         img: "wp.jpg",
         path: 6,
         stack: ['WordPress', 'gulp', 'sass', 'jquery'],
-        descr: 'Сайт строительной компании на CMS WordPress.',
+        descrRu: 'Сайт строительной компании на CMS WordPress.',
+        descrEn: 'Construction company website on CMS WordPress.',
         link: ''
     },
     {
@@ -59,7 +65,8 @@ const worksData = [
         img: "flaby.jpg",
         path: 7,
         stack: ['gulp', 'sass'],
-        descr: 'Адаптивная верстка лэндинга Flaby по PSD макету.',
+        descrRu: 'Адаптивная верстка лендинга Flaby по PSD макету.',
+        descrEn: 'Responsive layout of Flabby landing page using PSD layout.',
         link: 'https://github.com/disconnect-ed/HTML-Flaby'
     },
     {
@@ -68,7 +75,8 @@ const worksData = [
         img: "react-js-todo.png",
         path: 8,
         stack: ['axios', 'firebase', 'formik', 'react', 'redux', 'react-router', 'redux-thunk', 'yup', 'sass'],
-        descr: 'Приложение разработано на React JS (также есть мобильная версия на React Native). В приложении реализованы авторизация и регистрация новых пользователей. Тема меняется в зависимости от времени суток (утро, день, вечер, ночь). Для работы используется Firebase. Реализовано разделение дел на подгруппы и поиск.',
+        descrRu: 'Приложение разработано на React JS (также есть мобильная версия на React Native). В приложении реализованы авторизация и регистрация новых пользователей. Тема меняется в зависимости от времени суток (утро, день, вечер, ночь). Для работы используется Firebase. Реализовано разделение дел на подгруппы и поиск.',
+        descrEn: 'The application is developed in React JS (there is also a mobile version in React Native). The application implements authorization and registration of new users. The theme changes depending on the time of day (morning, afternoon, evening, night). For work, Firebase is used. The division of cases into subgroups and search has been implemented.',
         link: 'https://github.com/disconnect-ed/react-js-todo'
     },
     {
@@ -77,7 +85,8 @@ const worksData = [
         img: "react-native-todo.jpg",
         path: 9,
         stack: ['axios', 'firebase', 'formik', 'react', 'react-native', 'react-hooks', 'expo', 'redux', 'react-navigation', 'redux-thunk', 'yup'],
-        descr: 'Приложение на React Native (также есть версия на React JS). В приложении реализованы авторизация и регистрация новых пользователей. Тема меняется в зависимости от времени суток (утро, день, вечер, ночь). Для работы используется Firebase. Реализовано разделение дел на подгруппы и поиск.',
+        descrRu: 'Приложение на React Native (также есть версия на React JS). В приложении реализованы авторизация и регистрация новых пользователей. Тема меняется в зависимости от времени суток (утро, день, вечер, ночь). Для работы используется Firebase. Реализовано разделение дел на подгруппы и поиск.',
+        descrEn: 'React Native app (there is also a React JS version). The application implements authorization and registration of new users. The theme changes depending on the time of day (morning, afternoon, evening, night). For work, Firebase is used. The division of cases into subgroups and search has been implemented.',
         link: 'https://github.com/disconnect-ed/react-native-todo'
     },
     {
@@ -86,7 +95,8 @@ const worksData = [
         img: "react-native-calculator.jpg",
         path: 10,
         stack: ['expo', 'expo-sqlite', 'react', 'react-native', 'react-hooks', 'react-native-paper', 'react-navigation'],
-        descr: 'Приложение разработано на React Native. Реализован простой калькулятор с двумя экранами (вертикальный и горизонтальный). Доступна история всех расчетов (для записи используется SQLite), есть возможность менять тему (предусмотрена темная и светлая)',
+        descrRu: 'Приложение разработано на React Native. Реализован простой калькулятор с двумя экранами (вертикальный и горизонтальный). Доступна история всех расчетов (для записи используется SQLite), есть возможность менять тему (предусмотрена темная и светлая)',
+        descrEn: 'The application is developed in React Native. A simple calculator with two screens (vertical and horizontal) has been implemented. The history of all calculations is available (SQLite is used for recording), it is possible to change the theme (dark and light are provided)',
         link: 'https://github.com/disconnect-ed/react-native-calculator'
     },
 ]

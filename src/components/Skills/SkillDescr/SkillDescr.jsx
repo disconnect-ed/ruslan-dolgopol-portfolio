@@ -6,7 +6,7 @@ import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import {Animated} from "react-animated-css";
 import Paginator from "../../common/Paginator/Paginator";
 
-const SkillDescr = (props) => {
+const SkillDescr = ({langIsEng, ...props}) => {
 
     const skill = Number(props.match.params.skill)
     const data = props.skillsData.filter(result => {
@@ -29,11 +29,13 @@ const SkillDescr = (props) => {
                                     <div className="skills-descr-img"
                                          style={{backgroundImage: `url(https://disconnect-ed.github.io/ruslan-dolgopol-portfolio/skills/${result.img})`}}>
                                     </div>
-                                    <p className="skills-descr-text">{result.descr}</p>
+                                    <p className="skills-descr-text">
+                                        {langIsEng ? result.descrEn : result.descrRu}
+                                    </p>
                                     <div className="skills-descr-progress-wrap">
                                         <div className="skills-header">
-                                            <h3 className="skills__title skills-descr-progress__title">Уровень
-                                                владения</h3>
+                                            <h3 className="skills__title skills-descr-progress__title">
+                                                {langIsEng ? 'Proficiency level' : 'Уровень владения'}</h3>
                                         </div>
                                         <div className="skills-descr-progress">
                                             <CircularProgressbar value={result.level} text={`${result.level}%`}

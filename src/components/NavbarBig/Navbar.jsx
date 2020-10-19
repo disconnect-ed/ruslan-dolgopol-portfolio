@@ -1,15 +1,13 @@
 import React from "react";
 import './Navbar.sass'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faHome, faCheck, faBriefcase } from '@fortawesome/free-solid-svg-icons'
-import { faUser, faAddressCard } from '@fortawesome/free-regular-svg-icons'
+import {faHome, faCheck, faBriefcase, faGlobe} from '@fortawesome/free-solid-svg-icons'
+import {faUser, faAddressCard} from '@fortawesome/free-regular-svg-icons'
 import logo from '../../assets/img/logo-white.png'
 import {NavLink} from "react-router-dom";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
-const Navbar = ({paginatorIsActive}) => {
-
-
+const Navbar = ({paginatorIsActive, changeLang, langIsEng}) => {
 
     return (
         <nav className='navbar'>
@@ -19,36 +17,44 @@ const Navbar = ({paginatorIsActive}) => {
             <ul className="navbar-links">
                 <li className='navbar-link'>
                     <NavLink to="/main">
-                        <FontAwesomeIcon icon={faHome} />
+                        <FontAwesomeIcon icon={faHome}/>
                     </NavLink>
-                    <span className='navbar-link__title'>Главная</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'Main' : 'Главная'}</span>
                 </li>
                 <li className='navbar-link'>
                     <NavLink to="/about">
-                        <FontAwesomeIcon icon={faUser} />
+                        <FontAwesomeIcon icon={faUser}/>
                     </NavLink>
-                    <span className='navbar-link__title'>О себе</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'About Me' : 'О себе'}</span>
                 </li>
                 <li className='navbar-link'>
                     <NavLink to="/skills">
-                        <FontAwesomeIcon icon={faCheck} />
+                        <FontAwesomeIcon icon={faCheck}/>
                     </NavLink>
-                    <span className='navbar-link__title'>Навыки</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'Skills' : 'Навыки'}</span>
                 </li>
                 <li className='navbar-link'>
                     <NavLink to="/works">
-                        <FontAwesomeIcon icon={faBriefcase} />
+                        <FontAwesomeIcon icon={faBriefcase}/>
                     </NavLink>
-                    <span className='navbar-link__title'>Работы</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'Works' : 'Работы'}</span>
                 </li>
                 <li className='navbar-link'>
                     <NavLink to="/contacts">
-                        <FontAwesomeIcon icon={faAddressCard} />
+                        <FontAwesomeIcon icon={faAddressCard}/>
                     </NavLink>
-                    <span className='navbar-link__title'>Контакты</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'Contacts' : 'Контакты'}</span>
+                </li>
+                <li className='navbar-link'>
+                    <button onClick={changeLang}>
+                        <FontAwesomeIcon icon={faGlobe}/>
+                    </button>
+                    <span className='navbar-link__title'>
+                        {langIsEng ? 'Language: EN' : 'Язык: RU'}
+                    </span>
                 </li>
             </ul>
-            <NavbarMenu paginatorIsActive={paginatorIsActive} />
+            <NavbarMenu paginatorIsActive={paginatorIsActive}/>
         </nav>
     )
 }

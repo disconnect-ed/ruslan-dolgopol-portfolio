@@ -7,13 +7,15 @@ import {Animated} from "react-animated-css";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const Works = () => {
+const Works = ({langIsEng}) => {
     return (
         <>
             <Animated animationIn="fadeInRight" isVisible={true}>
                 <section className='works page-wrap'>
                     <div className="works-header">
-                        <h2 className="section__title">Мои работы</h2>
+                        <h2 className="section__title">
+                            {langIsEng ? 'My works' : 'Мои работы'}
+                        </h2>
                     </div>
                     <div className="works-wrap grid">
                         {
@@ -21,13 +23,13 @@ const Works = () => {
                                 return <WorksCard img={result.img} name={result.name}
                                                   key={result.path}
                                                   path={result.path}
-                                                  level={result.level}/>
+                                                  langIsEng={langIsEng}/>
                             })
                         }
                     </div>
                     <div className="works-footer">
                         <a target='_blank' href='https://github.com/disconnect-ed' className="works__button">
-                            <FontAwesomeIcon icon={faGithub} /> ВСЕ РАБОТЫ</a>
+                            <FontAwesomeIcon icon={faGithub} /> {langIsEng ? 'ALL WORKS' : 'ВСЕ РАБОТЫ'}</a>
                     </div>
                 </section>
                 <Footer/>
