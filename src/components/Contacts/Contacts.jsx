@@ -7,9 +7,8 @@ import {faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faLinkedin, faVk} from "@fortawesome/free-brands-svg-icons";
 import {Animated} from "react-animated-css";
 
-const Contacts = ({langIsEng}) => {
+const Contacts = React.memo(({langIsEng}) => {
     return (
-        <>
             <Animated animationIn="fadeInRight" isVisible={true}>
                 <section className='contacts page-wrap'>
                     <div className="contacts-header">
@@ -57,10 +56,9 @@ const Contacts = ({langIsEng}) => {
                         </div>
                     </div>
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
-        </>
     )
-}
+})
 
 export default Contacts

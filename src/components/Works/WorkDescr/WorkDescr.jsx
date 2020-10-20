@@ -7,7 +7,7 @@ import {faEye} from "@fortawesome/free-regular-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Paginator from "../../common/Paginator/Paginator";
 
-const WorkDescr = ({langIsEng, ...props}) => {
+const WorkDescr = React.memo(({langIsEng, ...props}) => {
 
     const work = Number(props.match.params.work)
     const data = props.worksData.filter(result => {
@@ -63,11 +63,11 @@ const WorkDescr = ({langIsEng, ...props}) => {
                     })}
 
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
         </>
     )
-}
+})
 
 const urlDataContainer = withRouter(WorkDescr)
 

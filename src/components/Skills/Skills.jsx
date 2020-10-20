@@ -6,7 +6,7 @@ import skillsData from '../../data/skillsData'
 import {Animated} from "react-animated-css";
 
 
-const Skills = ({langIsEng}) => {
+const Skills = React.memo(({langIsEng}) => {
 
     return (
         <>
@@ -25,10 +25,10 @@ const Skills = ({langIsEng}) => {
                         }
                     </div>
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
         </>
     )
-}
+})
 
 export default Skills

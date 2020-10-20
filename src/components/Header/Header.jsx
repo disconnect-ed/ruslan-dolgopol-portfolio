@@ -4,7 +4,7 @@ import {Animated} from "react-animated-css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faLinkedin, faVk} from "@fortawesome/free-brands-svg-icons";
 
-const Header = ({langIsEng}) => {
+const Header = React.memo(({langIsEng}) => {
     return (
         <Animated animationIn="fadeIn" isVisible={true}>
             <header className='header'>
@@ -30,6 +30,6 @@ const Header = ({langIsEng}) => {
             </header>
         </Animated>
     )
-}
+})
 
 export default Header;

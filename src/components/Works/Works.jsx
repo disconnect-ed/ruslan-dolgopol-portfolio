@@ -7,7 +7,7 @@ import {Animated} from "react-animated-css";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const Works = ({langIsEng}) => {
+const Works = React.memo(({langIsEng}) => {
     return (
         <>
             <Animated animationIn="fadeInRight" isVisible={true}>
@@ -32,10 +32,10 @@ const Works = ({langIsEng}) => {
                             <FontAwesomeIcon icon={faGithub} /> {langIsEng ? 'ALL WORKS' : 'ВСЕ РАБОТЫ'}</a>
                     </div>
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
         </>
     )
-}
+})
 
 export default Works

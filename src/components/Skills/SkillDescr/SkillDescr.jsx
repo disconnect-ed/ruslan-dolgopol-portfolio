@@ -6,7 +6,7 @@ import {buildStyles, CircularProgressbar} from "react-circular-progressbar";
 import {Animated} from "react-animated-css";
 import Paginator from "../../common/Paginator/Paginator";
 
-const SkillDescr = ({langIsEng, ...props}) => {
+const SkillDescr = React.memo(({langIsEng, ...props}) => {
 
     const skill = Number(props.match.params.skill)
     const data = props.skillsData.filter(result => {
@@ -55,11 +55,11 @@ const SkillDescr = ({langIsEng, ...props}) => {
                         )
                     })}
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
         </>
     )
-}
+})
 
 const urlDataContainer = withRouter(SkillDescr)
 

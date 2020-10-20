@@ -3,13 +3,13 @@ import Navbar from "./Navbar";
 
 export const NavbarContainer = ({paginatorIsActive, langIsEng, toggleLang}) => {
 
-    const changeLang = () => {
+    const handlerToggleLang = () => {
         toggleLang(prev => !prev)
     }
 
     return (
         <Navbar langIsEng={langIsEng} paginatorIsActive={paginatorIsActive}
-                changeLang={changeLang}
+                handlerToggleLang={handlerToggleLang}
         />
     )
 }

@@ -3,12 +3,12 @@ import './Footer.sass'
 import {faVk, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
-const Footer = () => {
+const Footer = ({langIsEng}) => {
 
     return (
         <footer className='footer'>
             <p className="footer-copyright">
-                © {new Date().getFullYear()} Ruslan Dolgopol
+                © {new Date().getFullYear()} {langIsEng ? 'Ruslan Dolgopol' : 'Руслан Долгопол'}
             </p>
             <div className="footer-social-links">
                 <a target='_blank' href="https://vk.com/r.dolgopol" className="footer-social__link">

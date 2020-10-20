@@ -7,7 +7,7 @@ import logo from '../../assets/img/logo-white.png'
 import {NavLink} from "react-router-dom";
 import NavbarMenu from "./NavbarMenu/NavbarMenu";
 
-const Navbar = ({paginatorIsActive, changeLang, langIsEng}) => {
+const Navbar = React.memo(({paginatorIsActive, handlerToggleLang, langIsEng}) => {
 
     return (
         <nav className='navbar'>
@@ -25,7 +25,7 @@ const Navbar = ({paginatorIsActive, changeLang, langIsEng}) => {
                     <NavLink to="/about">
                         <FontAwesomeIcon icon={faUser}/>
                     </NavLink>
-                    <span className='navbar-link__title'>{langIsEng ? 'About Me' : 'О себе'}</span>
+                    <span className='navbar-link__title'>{langIsEng ? 'About me' : 'О себе'}</span>
                 </li>
                 <li className='navbar-link'>
                     <NavLink to="/skills">
@@ -46,7 +46,7 @@ const Navbar = ({paginatorIsActive, changeLang, langIsEng}) => {
                     <span className='navbar-link__title'>{langIsEng ? 'Contacts' : 'Контакты'}</span>
                 </li>
                 <li className='navbar-link'>
-                    <button onClick={changeLang}>
+                    <button onClick={handlerToggleLang}>
                         <FontAwesomeIcon icon={faGlobe}/>
                     </button>
                     <span className='navbar-link__title'>
@@ -54,9 +54,10 @@ const Navbar = ({paginatorIsActive, changeLang, langIsEng}) => {
                     </span>
                 </li>
             </ul>
-            <NavbarMenu paginatorIsActive={paginatorIsActive}/>
+            <NavbarMenu langIsEng={langIsEng} handlerToggleLang={handlerToggleLang}
+                        paginatorIsActive={paginatorIsActive}/>
         </nav>
     )
-}
+})
 
 export default Navbar

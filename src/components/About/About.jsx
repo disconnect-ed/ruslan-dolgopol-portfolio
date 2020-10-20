@@ -3,7 +3,7 @@ import './About.sass'
 import Footer from "../Footer/Footer";
 import {Animated} from "react-animated-css";
 
-const About = ({langIsEng}) => {
+const About = React.memo(({langIsEng}) => {
     return (
         <>
             <Animated animationIn="fadeInRight" isVisible={true}>
@@ -60,10 +60,10 @@ const About = ({langIsEng}) => {
                         </div>
                     </div>
                 </section>
-                <Footer/>
+                <Footer langIsEng={langIsEng}/>
             </Animated>
         </>
     )
-}
+})
 
 export default About
